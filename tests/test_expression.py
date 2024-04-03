@@ -38,6 +38,7 @@ from app.expression import (
             9,
         ),
         (UnitaryOpNode(op=UnaryOperation.MINUS, lhs=BaseNode(lhs=1)), -1),
+        (UnitaryOpNode(op=UnaryOperation.PLUS, lhs=BaseNode(lhs=1)), 1),
     ],
 )
 def test_expressions(expression, expected_result):

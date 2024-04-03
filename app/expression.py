@@ -20,7 +20,7 @@ class BinaryOperation(Enum):
 
 
 class UnaryOperation(Enum):
-    # TODO: Support Unary +
+    PLUS = partial(Calculator.identity)
     SQRT = partial(Calculator.sqrt)
     MINUS = partial(Calculator.minus)
 

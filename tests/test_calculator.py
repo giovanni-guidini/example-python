@@ -58,3 +58,9 @@ def test_minus():
     assert Calculator.minus(-1) == 1
     assert Calculator.minus(0.5) == -0.5
     assert Calculator.minus(0) == 0
+
+
+def test_identity():
+    assert Calculator.identity(1) == 1
+    assert Calculator.identity(-1) == -1
+    assert Calculator.identity(0.1) == 0.1

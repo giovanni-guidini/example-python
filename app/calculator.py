@@ -28,5 +28,8 @@ class Calculator:
             e >>= 1
         return result
 
+    def identity(x):
+        return x
+
     def minus(x):
         return -x
