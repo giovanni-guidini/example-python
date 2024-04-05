@@ -15,9 +15,9 @@ coverage:
         target: "auto"
 
 ignore:
-  - 'packages/app-test/containers/MyPackage'
-  - 'packages/app-test/containers/MyPackage/MyPackage.py'
-  - 'packages/app-test/containers/MyPackage/**/*'
+  - 'packages/apptest/containers/MyPackage'
+  - 'packages/apptest/containers/MyPackage/MyPackage.py'
+  - 'packages/apptest/containers/MyPackage/**/*'
 
 
 flag_management:
