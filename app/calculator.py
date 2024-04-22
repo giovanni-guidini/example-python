@@ -13,6 +13,9 @@ class Calculator:
             return "Cannot divide by 0"
         return x * 1.0 / y
 
+    def mod(x, y):
+        return x % y
+
     def sqrt(x, precision=0.0005):
         guess = 1
         while abs(x - (guess * guess)) >= precision:

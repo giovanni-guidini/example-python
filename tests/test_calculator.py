@@ -59,3 +59,11 @@ def test_minus():
     assert Calculator.minus(-1) == 1
     assert Calculator.minus(0.5) == -0.5
     assert Calculator.minus(0) == 0
+
+
+def test_mod():
+    assert Calculator.mod(10, 2) == 0
+    assert Calculator.mod(11, 2) == 1
+    assert Calculator.mod(9, 3) == 0
+    assert Calculator.mod(10, 3) == 1
+    assert Calculator.mod(11, 3) == 2
