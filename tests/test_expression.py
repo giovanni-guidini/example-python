@@ -9,6 +9,38 @@ from app.expression import (
 )
 
 
+class TestBinaryOperationOperators(object):
+
+    def test_equality(self):
+        bin_op = BinaryOperation.SUBTRACT
+        assert type(bin_op) == BinaryOperation
+        assert (bin_op == 1) == False
+        assert (bin_op == "bin_op") == False
+        assert (bin_op == True) == False
+        assert (bin_op == UnaryOperation.MINUS) == False
+        assert (bin_op == BinaryOperation.ADD) == False
+        assert (bin_op == BinaryOperation.SUBTRACT) == True
+
+    def test_lt(self):
+        subtract = BinaryOperation.SUBTRACT
+        add = BinaryOperation.ADD
+        mult = BinaryOperation.MULTIPLY
+        pow = BinaryOperation.POW
+        assert (subtract < add) == False
+        assert (add < subtract) == False
+        assert (subtract < mult) == False
+        assert (mult < subtract) == True
+        assert (pow < mult) == True
+        assert (pow < add) == True
+        assert (pow < UnaryOperation.MINUS) == False
+
+    def test_error(self):
+        add = BinaryOperation.ADD
+        with pytest.raises(TypeError) as err:
+            add < "add"
+        assert str(err.value) == "can't compare BinaryOperation with <class 'str'>"
+
+
 @pytest.mark.parametrize(
     "expression,expected_result",
     [
