@@ -71,17 +71,17 @@ class BaseNode:
 
 
 @dataclass
-class UnitaryOpNode:
+class UnitaryOpNode(BaseNode):
     op: UnaryOperation
     lhs: "Node"
     rhs = None
 
 
 @dataclass
-class BinaryOpNode:
+class BinaryOpNode(BaseNode):
     op: BinaryOperation
     lhs: "Node"
-    rhs: "Node"
+    rhs: "Node" = None
 
 
 Node = Union[BaseNode, BinaryOpNode, UnitaryOpNode]

@@ -10,7 +10,6 @@ from app.expression import (
 
 
 class TestBinaryOperationOperators(object):
-
     def test_equality(self):
         bin_op = BinaryOperation.SUBTRACT
         assert type(bin_op) == BinaryOperation
