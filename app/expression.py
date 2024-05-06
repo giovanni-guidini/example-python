@@ -49,6 +49,20 @@ class UnaryOperation(Enum):
     def __call__(self, *args):
         return self.value(*args)
 
+    def __eq__(self, value: object) -> bool:
+        if type(value) != UnaryOperation:
+            return False
+        return value.value == self.value
+
+    def __lt__(self, value: object) -> bool:
+        if type(value) not in [BinaryOperation, UnaryOperation]:
+            raise TypeError(f"can't compare UnaryOperation with {type(value)}")
+        if type(value) == BinaryOperation:
+            # UnaryOperation has precedence over BinaryOperation
+            return True
+        # All UnaryOperations have the same level of precedence among themselves
+        return False
+
 
 @dataclass
 class BaseNode:

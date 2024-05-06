@@ -41,6 +41,28 @@ class TestBinaryOperationOperators(object):
         assert str(err.value) == "can't compare BinaryOperation with <class 'str'>"
 
 
+class TestUnaryOperationOperators(object):
+    def test_equality(self):
+        unary_op = UnaryOperation.MINUS
+        assert (unary_op == 1) == False
+        assert (unary_op == "unary_op") == False
+        assert (unary_op == BinaryOperation.SUBTRACT) == False
+        assert (unary_op == UnaryOperation.SQRT) == False
+        assert (unary_op == UnaryOperation.MINUS) == True
+
+    def test_lt(self):
+        unary_op = UnaryOperation.MINUS
+        assert (unary_op < BinaryOperation.SUBTRACT) == True
+        assert (unary_op < BinaryOperation.POW) == True
+        assert (unary_op < UnaryOperation.SQRT) == False
+
+    def test_error(self):
+        unary_op = UnaryOperation.MINUS
+        with pytest.raises(TypeError) as err:
+            unary_op < "unary_op"
+        assert str(err.value) == "can't compare UnaryOperation with <class 'str'>"
+
+
 @pytest.mark.parametrize(
     "expression,expected_result",
     [
