@@ -156,6 +156,20 @@ def test_add_node_to_stack(current_stack, new_node, expected):
                 rhs=BaseNode(lhs=2),
             ),
         ),
+        (
+            "1000+235",
+            BinaryOpNode(
+                lhs=BaseNode(lhs=1000), op=BinaryOperation.ADD, rhs=BaseNode(lhs=235)
+            ),
+        ),
+        (
+            "10.245+235.55",
+            BinaryOpNode(
+                lhs=BaseNode(lhs=10.245),
+                op=BinaryOperation.ADD,
+                rhs=BaseNode(lhs=235.55),
+            ),
+        ),
     ],
 )
 def test_parse_expression(expression, expected):
