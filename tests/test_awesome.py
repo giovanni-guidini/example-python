@@ -1,4 +1,4 @@
-from app.inner.app.expression_parser.awesome import g
+from app.inner.app.inner.awesome import g
 
 
 def test_g():
