@@ -9,3 +9,4 @@ def test_g():
 
 def test_f():
     assert f(10) == 1010
+    assert f(20) == 1020
