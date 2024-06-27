@@ -10,6 +10,10 @@ class Calculator:
 
     def divide(x, y):
         if y == 0:
+            print("These lines will cause coverage drop")
+            print("These lines will cause coverage drop")
+            print("These lines will cause coverage drop")
+            print("These lines will cause coverage drop")
             return "Cannot divide by 0"
         return x * 1.0 / y
 
