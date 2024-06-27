@@ -10,7 +10,6 @@ class Calculator:
 
     def divide(x, y):
         if y == 0:
-            print("This line is not covered")
             return "Cannot divide by 0"
         print("This line is covered")
         return x * 1.0 / y
