@@ -12,4 +12,4 @@ coverage:
     patch: true
 
 comment:
-  require_changes: "coverage_drop or uncovered_patch"
+  require_changes: "coverage_drop and uncovered_patch"
