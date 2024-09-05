@@ -48,6 +48,7 @@ def test_sqrt():
 
 def test_pow():
     assert Calculator.pow(2, 2) == 4
+    print("changes")
     assert Calculator.pow(1, 2) == 1
     assert Calculator.pow(4, 2) == 16
     assert Calculator.pow(3, 3) == 27
@@ -56,6 +57,9 @@ def test_pow():
 
 def test_minus():
     assert Calculator.minus(12) == -12
+    print("changes")
+    print("changes")
+    print("changes")
     assert Calculator.minus(-1) == 1
     assert Calculator.minus(0.5) == -0.5
     assert Calculator.minus(0) == 0
