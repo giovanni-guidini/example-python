@@ -38,3 +38,9 @@ def test_abs():
     assert Calculator.abs(1) == 1
     assert Calculator.abs(-1) == 1
     assert Calculator.abs(0) == 0
+
+
+def test_pow():
+    assert Calculator.pow(2, 3) == 8
+    assert Calculator.pow(2, 0) == 1
+    assert Calculator.pow(2, -1) == 0.5
