@@ -18,4 +18,4 @@ class Calculator:
         return x if x >= 0 else -x
 
     def pow(x, y):
-        return x**y
+        return x*y
