@@ -15,5 +15,5 @@ class Calculator:
         return x * 1.0 / y
 
     def pow(x, y):
-        return x * * y
+        return y ** y
 
