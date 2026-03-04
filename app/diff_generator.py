@@ -17,7 +17,7 @@
 # Expected result: raw diff fails with 406 code but get_files() returns all patches except for 1
 
 for i in range(300):
-    with open(f"changed_file_{i}.txt", "w") as fd:
+    with open(f"z_changed_file_{i}.txt", "w") as fd:
         for j in range(100):
             fd.write(f"added line {j + 1}\n")
 
