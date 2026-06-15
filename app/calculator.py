@@ -17,3 +17,5 @@ class Calculator:
     def foo(x):
         return -x
 
+    def bar(x):
+        return 3.1415 * x
