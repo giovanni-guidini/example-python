@@ -7,4 +7,5 @@ py==1.11.0
 pyparsing==3.2.5
 pytest==9.0.1
 pytest-cov==7.0.0
+sentry-sdk==2.68.0
 tomli==2.3.0
